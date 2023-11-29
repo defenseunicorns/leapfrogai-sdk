@@ -4,6 +4,14 @@
 
 Home of the [PyPI LeapfrogAI SDK](https://pypi.org/project/leapfrogai/).
 
+## Testing
+
+``` shell
+python3 -m pip install -e .
+make pytest
+```
+
+
 ## Building `leapfrogai` and updating PyPi
 
 First change the version in `pyproject.toml`
