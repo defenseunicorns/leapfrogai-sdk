@@ -1,6 +1,16 @@
 TAG ?= 0.3.2
-requirements:
+
+build-requirements:
 	pip-compile -o requirements.txt pyproject.toml
+
+build-requirements-dev:
+	pip-compile --extra tests -o requirements-dev.txt pyproject.toml
+
+requirements:
+	pip-sync requirements.txt requirements-dev.txt
+
+requirements-dev:
+	python -m pip install -r requirements-dev.txt
 
 gen: gen-python
 

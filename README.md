@@ -7,10 +7,10 @@ Home of the [PyPI LeapfrogAI SDK](https://pypi.org/project/leapfrogai/).
 ## Testing
 
 ``` shell
+make requirements-dev
 python3 -m pip install -e .
-make pytest
+make test
 ```
-
 
 ## Building `leapfrogai` and updating PyPi
 
