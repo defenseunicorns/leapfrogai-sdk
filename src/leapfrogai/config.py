@@ -1,7 +1,7 @@
 import logging
 import os
 
-from confz import BaseConfig, FileSource
+from confz import BaseConfig, FileSource, EnvSource
 from google.protobuf.internal.containers import RepeatedCompositeFieldContainer
 
 from leapfrogai import ChatItem, ChatRole
@@ -41,9 +41,9 @@ class BackendConfig(BaseConfig):
     prompt_format: PromptFormat | None = None
     defaults: LLMDefaults = LLMDefaults()
 
-    CONFIG_SOURCES = FileSource(
-        file=os.getenv("LEAPFROGAI_CONFIG_FILE", "config.yaml"), optional=True
-    )
+    CONFIG_SOURCES = [
+        FileSource(file=os.getenv("LEAPFROGAI_CONFIG_FILE", "config.yaml"), optional=True),
+        EnvSource(allow_all=True, optional=True)]
 
     def apply_chat_template(
         self, chat_items: RepeatedCompositeFieldContainer[ChatItem]
