@@ -43,7 +43,7 @@ class BackendConfig(BaseConfig):
 
     CONFIG_SOURCES = [
         FileSource(file=os.getenv("LEAPFROGAI_CONFIG_FILE", "config.yaml"), optional=True),
-        EnvSource(allow_all=True, optional=True)]
+        EnvSource(allow_all=True)]
 
     def apply_chat_template(
         self, chat_items: RepeatedCompositeFieldContainer[ChatItem]
