@@ -1,0 +1,21 @@
+# Documentation and fallbacks for missed things
+* @defenseunicorns/leapfrogai
+*.md @defenseunicorns/leapfrogai
+
+# Core Code
+/src/ @gerred @YrrepNoj @gphorvath
+/proto/ @gerred @YrrepNoj @gphorvath
+/tests/ @gerred @YrrepNoj @gphorvath
+/main.py @gerred @YrrepNoj @gphorvath
+
+# Pipeline and Project Files
+/pyproject.toml @gerred @YrrepNoj
+/.github/ @gerred @YrrepNoj
+/.gitignore @gerred @YrrepNoj
+/Makefile @gerred @YrrepNoj
+/requirements.txt @gerred @YrrepNoj
+/requirements-dev.txt @gerred @YrrepNoj
+
+# Additional privileged files
+/CODEOWNERS @jeff-mccoy @mikevanhemert @austenbryan @gerred
+/LICENSE @jeff-mccoy @austenbryan @gerred
