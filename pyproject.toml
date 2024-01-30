@@ -43,3 +43,6 @@ packages = ["src/leapfrogai"]
 
 [tool.pytest.ini_options]
 addopts = ["--import-mode=importlib"]
+
+[tool.ruff]
+exclude = ["src/leapfrogai/audio", "src/leapfrogai/chat", "src/leapfrogai/completion", "src/leapfrogai/embeddings", "src/leapfrogai/name"]
