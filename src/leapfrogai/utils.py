@@ -1,12 +1,15 @@
 # Adapted from Gunicorn's utils module.
 
-import sys
 import ast
 import importlib
 import logging
+import os
+import sys
 import traceback
+
 from leapfrogai.errors import AppImportError
-   
+
+
 def import_app(module):
     parts = module.split(":", 1)
     if len(parts) == 1:
@@ -89,6 +92,7 @@ def import_app(module):
         raise AppImportError("Application object must be callable.")
     return app
 
+
 def _called_with_wrong_args(f):
     """Check whether calling a function raised a ``TypeError`` because
     the call failed or because something in the function raised the
@@ -113,4 +117,3 @@ def _called_with_wrong_args(f):
         # Delete tb to break a circular reference in Python 2.
         # https://docs.python.org/2/library/sys.html#sys.exc_info
         del tb
-    

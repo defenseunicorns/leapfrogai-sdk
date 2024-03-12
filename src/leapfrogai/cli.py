@@ -5,6 +5,7 @@ import asyncio
 from leapfrogai.utils import import_app
 from leapfrogai.serve import serve
 
+
 @click.argument("app", envvar="LEAPFROGAI_APP")
 @click.option(
     "--host",
@@ -34,6 +35,6 @@ def cli(app: str, host: str, port: str, app_dir: str):
     app = import_app(app)
     asyncio.run(serve(app(), host, port))
 
-    
+
 if __name__ == "__main__":
     cli()  # pragma: no cover
