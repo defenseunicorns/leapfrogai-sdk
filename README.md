@@ -1,5 +1,7 @@
 # LeapfrogAI SDK
 
+***⚠️This repo is archived in favor of the LeapfrogAI monorepo: https://github.com/defenseunicorns/leapfrogai⚠️***
+
 ## Description
 
 Home of the [PyPI LeapfrogAI SDK](https://pypi.org/project/leapfrogai/).
